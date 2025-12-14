@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Contact | Mabna</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">
+  <img src="images/logo.png" alt="Mabna" />
+</a>
+
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>Contact Us</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+
+						<header>
+							<h2>Get in touch</h2>
+						</header>
+						<p>For tenders, quotations, or general enquiries, contact our team using the details below.</p>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<h3>Contact details</h3>
+								<ul class="alt">
+									<li><strong>Phone:</strong> 0416 943 339</li>
+									<li><strong>Email:</strong> info@mabna.com.au</li>
+									<li><strong>Office:</strong> Liverpool, NSW</li>
+								</ul>
+								<p>
+							</div>
+							<div class="col-6 col-12-medium">
+								<h3>Enquiry form</h3>
+								
+
+<form id="contact-form" method="POST" action="https://formspree.io/f/xvgeyzjv">
+  <!-- Email subject -->
+  <input type="hidden" name="_subject" value="New website enquiry – Mabna">
+
+  <!-- Spam protection (honeypot) -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <div class="row gtr-uniform">
+    <div class="col-6 col-12-xsmall">
+      <input type="text" name="name" id="name" placeholder="Name" required />
+    </div>
+
+    <div class="col-6 col-12-xsmall">
+      <input type="email" name="email" id="email" placeholder="Email" required />
+    </div>
+
+    <div class="col-12">
+      <input type="text" name="subject" id="subject" placeholder="Subject" required />
+
+    </div>
+
+    <div class="col-12">
+      <textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
+    </div>
+
+    <div class="col-12">
+      <ul class="actions">
+        <li><input type="submit" value="Send" class="primary" /></li>
+        <li><input type="reset" value="Reset" /></li>
+      </ul>
+    </div>
+  </div>
+</form>
+
+<div id="form-success" style="display:none;">
+  <h3>Thanks — we’ve received your enquiry.</h3>
+  <p>Our team will be in touch shortly.</p>
+</div>
+
+								</form>
+								
+						</div>
+</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+					<section>
+  <h3>Mabna Pty Ltd</h3>
+  <p>
+    Civil Engineering &amp; Infrastructure Specialists<br />
+    Delivering Bulk Earthworks, Subdivisions, Roadworks<br /> Project Management, Supplementary Works<br /> and Concrete Works across the Eastern Coast.
+  </p>
+</section>
+
+<section>
+  <h4>Contact</h4>
+  <ul class="alt">
+    <li><strong>Email:</strong> info@mabna.com.au</li>
+    <li><strong>Phone:</strong> 0416 943 339</li>
+    <li><strong>Office:</strong> Liverpool, NSW</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Capabilities</h4>
+  <ul class="alt">
+    <li>Roadworks &amp; Intersections</li>
+    <li>Utility installation &amp; Relocation</li>
+    <li>Bulk Earthworks &amp; Subdivisions</li>
+    <li>Public Domain &amp; Streetscape</li>
+  </ul>
+</section>
+
+					</div>
+					<div class="copyright">
+  &copy; Mabna Pty Ltd. All rights reserved.
+</div>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+<script>
+  const form = document.getElementById("contact-form");
+  const successMessage = document.getElementById("form-success");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // Force HTML validation UI
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        form.style.display = "none";
+        successMessage.style.display = "block";
+      } else {
+        alert("There was a problem submitting the form. Please try again.");
+      }
+    } catch (err) {
+      alert("There was a problem submitting the form. Please try again.");
+    }
+  });
+</script>
+
+
+	</body>
+</html>
