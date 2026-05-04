@@ -2085,7 +2085,7 @@ ul.icons {
   background-color: #4779D5;
   color: rgba(255, 255, 255, 0.75);
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(71, 121, 213, 0.25), rgba(71, 121, 213, 0.25)), url(././images/cta01.jpg);
+  background-image: linear-gradient(rgba(71, 121, 213, 0.25), rgba(71, 121, 213, 0.25)), url("images/cta01.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3056,4 +3056,201 @@ input:invalid:focus, textarea:invalid:focus {
   .client-strip img {
     height: 42px;
   }
+}
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+  transition: transform 0.2s ease;
+}
+
+.project-card .view-project {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #3e72d9;
+}
+
+.project-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.project-summary-grid div {
+  border-left: 3px solid #3e72d9;
+  padding-left: 1rem;
+}
+
+.project-summary-grid h3 {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.project-summary-grid p {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .project-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-slideshow {
+	position: relative;
+	width: 100%;
+	margin: 0 0 2rem 0;
+	overflow: hidden;
+	border-radius: 4px;
+}
+
+.project-slideshow .slide {
+	display: none;
+}
+
+.project-slideshow .slide.active {
+	display: block;
+}
+
+.project-slideshow img {
+	width: 100%;
+	height: 520px;
+	object-fit: cover;
+	display: block;
+}
+
+.project-slideshow .prev,
+.project-slideshow .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 1rem;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.5rem;
+	background: rgba(0, 0, 0, 0.35);
+	text-decoration: none;
+	user-select: none;
+}
+
+.project-slideshow .prev {
+	left: 0;
+}
+
+.project-slideshow .next {
+	right: 0;
+}
+
+.project-slideshow .prev:hover,
+.project-slideshow .next:hover {
+	background: rgba(0, 0, 0, 0.6);
+	text-decoration: none;
+}
+
+.slide-dots {
+	text-align: center;
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+}
+
+.dot {
+	cursor: pointer;
+	height: 12px;
+	width: 12px;
+	margin: 0 4px;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.2s ease;
+}
+
+.dot:hover,
+.active-dot {
+	background-color: #3e72d9;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 0.5s;
+}
+
+@keyframes fade {
+	from { opacity: 0.4; }
+	to { opacity: 1; }
+}
+
+@media screen and (max-width: 980px) {
+	.project-slideshow img {
+		height: 380px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.project-slideshow img {
+		height: 260px;
+	}
+}#heading.kellyville-heading {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../images/projects/kellyville-cover.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#heading.austral-heading {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../images/projects/austral-cover.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#heading.oatlands-heading {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../images/projects/oatlands-cover.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#heading.austral-banner {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../images/projects/austral-banner.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#heading.kellyville-banner {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../images/projects/kellyville-banner.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#heading.oatlands-banner {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../images/projects/oatlands-banner.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#heading.oatlands-banner {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../images/projects/oatlands-banner.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
